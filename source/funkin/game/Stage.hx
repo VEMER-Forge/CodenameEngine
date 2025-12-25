@@ -283,6 +283,7 @@ class Stage extends FlxBasic implements IBeatReceiver {
 			charPos.camyoffset = Std.parseFloat(node.getAtt("camyoffset")).getDefault(charPos.camyoffset);
 			charPos.skewX = Std.parseFloat(node.getAtt("skewx")).getDefault(charPos.skewX);
 			charPos.skewY = Std.parseFloat(node.getAtt("skewy")).getDefault(charPos.skewY);
+			charPos.visible = Std.parseFloat(node.getAtt("visible")).getDefault(charPos.visible);
 			charPos.alpha = Std.parseFloat(node.getAtt("alpha")).getDefault(charPos.alpha);
 			charPos.angle = Std.parseFloat(node.getAtt("angle")).getDefault(charPos.angle);
 			charPos.flipX = (node.has.flip || node.has.flipX) ? (node.getAtt("flip") == "true" || node.getAtt("flipX") == "true") : charPos.flipX;
@@ -412,6 +413,7 @@ class StageCharPos extends FlxObject {
 	public var skewX:Float = 0;
 	public var skewY:Float = 0;
 	public var alpha:Float = 1;
+	public var visible:Bool = true;
 	public var flipX:Bool = false;
 	public var scale:FlxPoint = FlxPoint.get(1, 1);
 	public var zoomFactor:Float = 1;
